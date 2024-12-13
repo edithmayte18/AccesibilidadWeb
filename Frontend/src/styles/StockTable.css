@@ -1,0 +1,177 @@
+/* General Styles */
+.stock-table {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stock-table h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #222;
+}
+
+/* Search Input */
+.stock-table input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.stock-table input:focus {
+  outline: 2px solid #0078d7;
+  outline-offset: 2px;
+}
+
+/* Table Styles */
+.stock-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table Header */
+.stock-table thead {
+  background-color: #0056B3;
+  color: #fff;
+}
+
+.stock-table thead th {
+  text-align: left;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+/* Table Body */
+.stock-table tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+}
+
+.stock-table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.stock-table tbody tr:hover {
+  background-color: #e8f4fc;
+}
+
+.stock-table tbody td {
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Buttons */
+.stock-table button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #CC1F1F;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.stock-table button:hover {
+  background-color: #c9302c;
+}
+
+.stock-table button:focus {
+  outline: 2px solid #c9302c;
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .stock-table {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .stock-table thead {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .stock-table tbody tr {
+    border-color: #fff;
+  }
+
+  .stock-table input {
+    border-color: #fff;
+  }
+
+  .stock-table button {
+    background-color: #ff0000;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stock-table table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .stock-table thead, 
+  .stock-table tbody {
+    display: block;
+  }
+
+  .stock-table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .stock-table tbody td {
+    flex: 1 1 calc(50% - 1rem);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+
+  .stock-table tbody td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+  }
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filters input,
+.filters select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.filters input {
+  flex: 1;
+}
+
+.filters select {
+  width: 200px;
+}

@@ -1,0 +1,132 @@
+/* General Styles */
+.product-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Input Styles */
+.product-form input,
+.product-form select,
+.product-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.product-form input:focus,
+.product-form select:focus,
+.product-form button:focus {
+  outline: 2px solid #0078d7;
+  outline-offset: 2px;
+  background-color: #f0f8ff;
+}
+
+.product-form button:focus {
+  outline: 3px solid #ffce56;
+  background-color: #003d80;
+}
+
+/* Label for Inputs */
+.product-form input::placeholder {
+  color: #666;
+}
+.product-form input:focus::placeholder {
+  color: transparent;
+}
+
+/* Select Styles */
+.product-form select {
+  appearance: none;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Button Styles */
+.product-form button {
+  background-color: #0056b3;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-form button:hover {
+  background-color: #0056b3;
+}
+
+.product-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Error and Success Accessibility */
+.product-form .error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.product-form .success-message {
+  color: green;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .product-form {
+    padding: 1rem;
+  }
+
+  .product-form h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .product-form {
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+  }
+
+  .product-form input,
+  .product-form select,
+  .product-form button {
+    border-color: #fff;
+    color: #000;
+    background-color: #fff;
+  }
+
+  .product-form button:hover {
+    background-color: #003d80;
+    color: #000;
+  }
+}
+
+/* Keyboard Navigation */
+.product-form input:focus,
+.product-form select:focus,
+.product-form button:focus {
+  outline: 2px dashed #000;
+  outline-offset: 4px;
+}
